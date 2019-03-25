@@ -148,7 +148,7 @@ saveRDS(my_train,'1_Data/myname_mypseudonym_train.RDS')
 </table>
 </div>
 
-5. Use any weapon in your arsenal (or `caret`'s arsenal). Feel free to try different models, use different tuning parameter settings or preprocessing methods, make use of all or some variables. Whatever may lead to the highest prediction `MAE`. For help take a look at the full [**course materials**](https://therbootcamp.github.io/appliedML_2019Jan/). 
+5. Use any weapon in your arsenal (or `caret`'s arsenal). Feel free to try different models (see *Models* tab), use different tuning parameter settings or preprocessing methods, make use of all or some variables. Whatever may lead to the highest prediction `MAE`. For help take a look at the full [**course materials**](https://therbootcamp.github.io/appliedML_2019Jan/). 
 
 6. In order to be able to evaluate the models refrain from any manipulation (engineering) of features other than those accessible via the `preProcess` argument in the `train()` function.
 
@@ -417,6 +417,11 @@ saveRDS(my_train,'1_Data/myname_mypseudonym_train.RDS')
 |:------|:------|
 |`tidyverse`|`install.packages("tidyverse")`|`load("tidyverse")`|
 |`caret`|`install.packages("caret")`|`load("caret")`|
+
+
+## Models
+
+<iframe src="https://topepo.github.io/caret/available-models.html" style="width:100%;height:1200px"></iframe>
 
 
 ## Examples

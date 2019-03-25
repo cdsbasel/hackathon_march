@@ -145,11 +145,11 @@ CDS Hackathon
 <h1></h1>
 <div id="overview" class="section level2">
 <h2>Overview</h2>
-<p><em>Washington, D.C. anno 2054.</em></p>
+<p><em>Washington, D.C., Anno 2054.</em></p>
 <p>In an utopian, future world mankind has achieved a state of perfect orderliness. In this world, humans have become ideal decision makers, who always choose rationally in light of their preferences and the law. That is, almost all humans. A small resistance continues to disobey, by letting themselves be guided by situational greed and excitement leading them to engage in ruthlessly risky behavior. To identify these troublemakers, the Secretary of Homeland Security funded a new task force headed by your friend, Tom Cruise.</p>
-<p>Knowing himself little about machine learning, Tom Cruise approached you to help him predict risk taking based on a short psychological assessment known as the Basel-Berlin Risk Assessment. This less than 24h assessment has been introduced by the now classic Basel-Berlin Risk Study (<a href="http://advances.sciencemag.org/content/advances/3/10/e1701381.full.pdf"><strong>BBRS</strong></a>) conducted almost 30 years ago by Renato Frey and colleagues. Your task is to use the BBRS’s data to develop a model that predicts self-reported, yearly risk taking based on the 224 variables of this frugal measurement instrument.</p>
-<p>Specifcally, your goal is to outperform Tom’s other friends by finding a model that has the lowest mean absolute error (MAE) in order to prove to him that you are worthy of his trust.</p>
-<p>The competition will end in…</p>
+<p>Knowing himself little about machine learning, Tom Cruise approached you to help him predict risk taking based on a short psychological assessment known as the Basel-Berlin Risk Assessment. This less than 24h assessment has been introduced by the classic Basel-Berlin Risk Study (<a href="http://advances.sciencemag.org/content/advances/3/10/e1701381.full.pdf"><strong>BBRS</strong></a>) conducted almost 30 years ago by Renato Frey and colleagues. Your task is to use the BBRS’s data to develop a model that predicts self-reported, yearly risk taking based on the 207 variables of this frugal measurement instrument.</p>
+<p>Specifically, your goal is to outperform Tom’s other friends by finding a model that has the lowest mean absolute error (MAE) in order to prove to him that you are worthy of his friendship. Follow the instructions under the <em>Instructions</em> tab.</p>
+<p>The competition ends in…</p>
 <font style="font-size:32px">
 <p id="demo" align="center">
 </p>
@@ -202,7 +202,7 @@ library(caret)</code></pre>
 <li>With the code below, load the <code>bbrs</code> data set and change any character variables to factors.</li>
 </ol>
 <pre class="r"><code># Load bbrs data
-bbrs &lt;- read_csv(file = &quot;https://cdsbasel.github.io/hackathon_march/bbrs_train.csv&quot;)
+bbrs &lt;- read_csv(file = &quot;https://cdsbasel.github.io/hackathon_march/BBRS_train.csv&quot;)
 
 # change character to factor
 bbrs &lt;- bbrs %&gt;% mutate_if(is.character, as.factor)</code></pre>
@@ -260,10 +260,10 @@ MAE
 </ol>
 </div>
 </div>
-<div id="datasets" class="section level2">
-<h2>Datasets</h2>
-<div id="data-sets" class="section level4">
-<h4>Data sets</h4>
+<div id="dataset" class="section level2">
+<h2>Dataset</h2>
+<div id="data-set" class="section level4">
+<h4>Data set</h4>
 <table>
 <thead>
 <tr class="header">
@@ -1292,6 +1292,11 @@ MAE
 </tbody>
 </table>
 </div>
+</div>
+<div id="models" class="section level2">
+<h2>Models</h2>
+<iframe src="https://topepo.github.io/caret/available-models.html" style="width:100%;height:600px">
+</iframe>
 </div>
 <div id="examples" class="section level2">
 <h2>Examples</h2>
