@@ -87,7 +87,7 @@ var x = setInterval(function() {
 
 ### Preliminaries
 
-1. Using `library()` load the set of packages listed in the functions section above.
+1. Load the set of packages listed in the functions section above.
 
 ```{r, eval = FALSE, echo = TRUE}
 ## NAME
@@ -102,7 +102,7 @@ library(caret)
 library(tidyverse)
 ```
 
-2. With the code below, load the `bbrs` data set and change any character variables to factors.
+2. Load the `bbrs` data set and change any character variables to factors.
 
 ```{r, echo = TRUE, eval = FALSE, message = FALSE, warning = FALSE}
 
@@ -118,9 +118,9 @@ bbrs <- bbrs %>% mutate_if(is.character, as.factor)
 
 ### Competition rules
 
-1. The goal of the competition is to predict with minimal `MAE` the self-reported risk taking within a year (variable `Dy`).
+1. The goal of the competition is to **predict `Dy`** (self-reported risk taking within a year) with **minimal `MAE`**.
 
-2. Entering the competition grants you a chance to win lots of &#127870;&#127870;&#127870;.
+2. Entering the competition grants you a chance to win &#127870;&#127870;&#127870;.
 
 3. To enter the competition, you must submit no more, no less than one caret `train`-object (result of the `train()` function) containing your candidate model. To submit the model, first save your model as an `.RDS`-file named `yourname_pseudonym_train.RDS`, with `yourname` replaced by your real name and `pseudonym` replaced by a pseudonym of your choice. See the code below.
 
@@ -129,26 +129,9 @@ bbrs <- bbrs %>% mutate_if(is.character, as.factor)
 saveRDS(my_train,'1_Data/myname_mypseudonym_train.RDS')
 ```
 
-4. Submit your `.RDS` file (containing your training object) via the following Links sheets:
+4. Submit your `.RDS` file (containing your training object) via this link:  [**Submit candidate**](https://www.dropbox.com/request/QapEfuzEL4JM9bR62hXZ).
 
-<div align = "center">
-<table>
-<tr>
-<th>Task type</th>
-<th>Criterion</th>
-<th>Performance measure</th>
-<th>Submission link</th>
-</tr>
-<tr>
-  <td>Regression</td> 
-  <td>Yearly risk taking (`Dy`)</td>
-  <td>MAE</td>
-  <td>[**Submit candidate**](https://www.dropbox.com/request/QapEfuzEL4JM9bR62hXZ)</td>
-</tr>
-</table>
-</div>
-
-5. Use any weapon in your arsenal (or `caret`'s arsenal). Feel free to try different models (see *Models* tab), use different tuning parameter settings or preprocessing methods, make use of all or some variables. Whatever may lead to the highest prediction `MAE`. For help take a look at the full [**course materials**](https://therbootcamp.github.io/appliedML_2019Jan/). 
+5. Use any weapon in your arsenal (or `caret`'s arsenal). Feel free to try different models (see *Models* tab), use different tuning parameter settings or preprocessing methods, make use of all or some variables. Whatever may lead to the highest prediction `MAE`. For help take a look at the full [course materials](https://therbootcamp.github.io/appliedML_2019Jan/). 
 
 6. In order to be able to evaluate the models refrain from any manipulation (engineering) of features other than those accessible via the `preProcess` argument in the `train()` function.
 
