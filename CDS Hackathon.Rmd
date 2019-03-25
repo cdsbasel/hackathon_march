@@ -46,7 +46,7 @@ In an utopian, future world mankind has achieved a state of perfect orderliness.
 
 Knowing himself little about machine learning, Tom Cruise approached you to help him predict risk taking based on a short psychological assessment known as the Basel-Berlin Risk Assessment. This less than 24h assessment has been introduced by the now classic Basel-Berlin Risk Study ([**BBRS**](http://advances.sciencemag.org/content/advances/3/10/e1701381.full.pdf)) conducted almost 30 years ago by Renato Frey and colleagues. Your task is to use the BBRS's data to develop a model that predicts self-reported, yearly risk taking based on the 224 variables of this frugal measurement instrument.      
 
-Specifcally, your goal is to outperform Tom's other friends by finding a model that has the lowest mean absolute error (MAD) in order to prove to him that you are worthy of his trust. 
+Specifcally, your goal is to outperform Tom's other friends by finding a model that has the lowest mean absolute error (MAE) in order to prove to him that you are worthy of his trust. 
 
 The competition will end in...
 
@@ -102,23 +102,25 @@ library(caret)
 library(tidyverse)
 ```
 
-2. With the code below, load the `bbrs_train` data set and change any character variables to factors.
+2. With the code below, load the `bbrs` data set and change any character variables to factors.
 
 ```{r, echo = TRUE, eval = FALSE, message = FALSE, warning = FALSE}
 
-# Load tweet data
-tweets <- read_csv(file = "https://raw.githubusercontent.com/therbootcamp/appliedML_2019Jan/master/1_Data/tweets_train.csv")
+# Load bbrs data
+bbrs <- read_csv(file = "https://cdsbasel.github.io/hackathon_march/bbrs_train.csv")
 
 # change character to factor
-tweets <- tweets %>% mutate_if(is.character, as.factor)
+bbrs <- bbrs %>% mutate_if(is.character, as.factor)
 
 ```
 
+3. For guidance on how to go on see the code under the *Examples* tab.
+
 ### B Competition rules
 
-1. The goal of the competition is to predict with maximal `Accuracy` whether a twitter user is `'female'` or `'male'`.
+1. The goal of the competition is to predict with minimal `MAE` the self-reported risk taking within a year (variable `Dy`).
 
-2. Entering the competition grants you a chance to win lots of &#127851;&#127851;&#127851; and a hard copy of Kuhn's [Applied Predictive Modeling](https://www.springer.com/de/book/9781461468486).
+2. Entering the competition grants you a chance to win lots of &#127870;&#127870;&#127870;.
 
 3. To enter the competition, you must submit no more, no less than one caret `train`-object (result of the `train()` function) containing your candidate model. To submit the model, first save your model as an `.RDS`-file named `yourname_pseudonym_train.RDS`, with `yourname` replaced by your real name and `pseudonym` replaced by a pseudonym of your choice. See the code below.
 
@@ -138,20 +140,17 @@ saveRDS(my_train,'1_Data/myname_mypseudonym_train.RDS')
 <th>Submission link</th>
 </tr>
 <tr>
-  <td>Classification</td> 
-  <td>tweets (`gender`)</td>
-  <td>Accuracy</td>
-  <td>[**Submit candidate**](https://www.dropbox.com/request/vDp6ooS5BdzwBpFtdWJQ)</td>
+  <td>Regression</td> 
+  <td>Yearly risk taking (`Dy`)</td>
+  <td>MAE</td>
+  <td>[**Submit candidate**](https://www.dropbox.com/request/QapEfuzEL4JM9bR62hXZ)</td>
 </tr>
 </table>
 </div>
 
-5. Use any weapon in your arsenal (or `caret`'s arsenal). Feel free to try different models, use different tuning parameter settings or preprocessing methods, make use of all or some variables. Whatever may lead to the highest prediction `Accuracy`. Make sure to look at the [**course materials**](https://therbootcamp.github.io/appliedML_2019Jan/) for help. 
+5. Use any weapon in your arsenal (or `caret`'s arsenal). Feel free to try different models, use different tuning parameter settings or preprocessing methods, make use of all or some variables. Whatever may lead to the highest prediction `MAE`. For helo take a look at the full [**course materials**](https://therbootcamp.github.io/appliedML_2019Jan/). 
 
-6. In order to be able to evaluate the models refrain from any manipulation (or engineering) of features other than those accessible via the `preProcess` argument in the `train()` function.
-
-7. If you run into problems, feel free to ask us for help (<a href="mailto:therbootcamp.com?subject=Help me"><b>mail</b></a>). However, we won’t give you much modeling advice.
-
+6. In order to be able to evaluate the models refrain from any manipulation (engineering) of features other than those accessible via the `preProcess` argument in the `train()` function.
 
 
 ## Datasets
@@ -160,9 +159,11 @@ saveRDS(my_train,'1_Data/myname_mypseudonym_train.RDS')
 
 |File  |Rows | Columns |
 |:----|:-----|:------|
-|[bbrs_train]()| 754 | 229 |
+|[bbrs_train]()| 748 | 207 |
 
 #### Variable descriptions
+
+#### REMOVE OMMITTED VARS
 
 |Variable | Description |
 |:-------------|:-------------------------------------|
