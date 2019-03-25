@@ -16,6 +16,7 @@ output:
   html_document:
     css: practical.css
     self_contained: no
+
 ---
 
 ```{r setup, echo = FALSE}
