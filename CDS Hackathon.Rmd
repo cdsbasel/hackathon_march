@@ -46,9 +46,9 @@ In an utopian, future world mankind has achieved a state of perfect orderliness.
 
 Knowing himself little about machine learning, Tom Cruise approached you to help him predict risk taking based on a short psychological assessment known as the Basel-Berlin Risk Assessment. This less than 24h assessment has been introduced by the now classic Basel-Berlin Risk Study ([**BBRS**](http://advances.sciencemag.org/content/advances/3/10/e1701381.full.pdf)) conducted almost 30 years ago by Renato Frey and colleagues. Your task is to use the BBRS's data to develop a model that predicts self-reported, yearly risk taking based on the 207 variables of this frugal measurement instrument.      
 
-Specifically, your goal is to outperform Tom's other friends by finding a model that has the lowest mean absolute error (MAE) in order to prove to him that you are worthy of his friendship. Follow the instructions under the *Instruction* tab. 
+Specifically, your goal is to outperform Tom's other friends by finding a model that has the lowest mean absolute error (MAE) in order to prove to him that you are worthy of his friendship. Follow the instructions under the *Instructions* tab. 
 
-The competition will end in...
+The competition ends in...
 
 <font style="font-size:32px"><p id="demo" align="center"></p></font>
 
