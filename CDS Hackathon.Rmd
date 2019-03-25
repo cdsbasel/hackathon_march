@@ -85,7 +85,7 @@ var x = setInterval(function() {
 
 ## Instructions
 
-## A - Preliminaries
+### A - Preliminaries
 
 1. Using `library()` load the set of packages listed in the functions section above.
 
@@ -114,7 +114,7 @@ tweets <- tweets %>% mutate_if(is.character, as.factor)
 
 ```
 
-## B Competition rules
+### B Competition rules
 
 1. The goal of the competition is to predict with maximal `Accuracy` whether a twitter user is `'female'` or `'male'`.
 

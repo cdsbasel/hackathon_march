@@ -187,9 +187,8 @@ var x = setInterval(function() {
 </div>
 <div id="instructions" class="section level2">
 <h2>Instructions</h2>
-</div>
-<div id="a---preliminaries" class="section level2">
-<h2>A - Preliminaries</h2>
+<div id="a---preliminaries" class="section level3">
+<h3>A - Preliminaries</h3>
 <ol style="list-style-type: decimal">
 <li>Using <code>library()</code> load the set of packages listed in the functions section above.</li>
 </ol>
@@ -208,8 +207,8 @@ tweets &lt;- read_csv(file = &quot;https://raw.githubusercontent.com/therbootcam
 # change character to factor
 tweets &lt;- tweets %&gt;% mutate_if(is.character, as.factor)</code></pre>
 </div>
-<div id="b-competition-rules" class="section level2">
-<h2>B Competition rules</h2>
+<div id="b-competition-rules" class="section level3">
+<h3>B Competition rules</h3>
 <ol style="list-style-type: decimal">
 <li><p>The goal of the competition is to predict with maximal <code>Accuracy</code> whether a twitter user is <code>'female'</code> or <code>'male'</code>.</p></li>
 <li><p>Entering the competition grants you a chance to win lots of 🍫🍫🍫 and a hard copy of Kuhn’s <a href="https://www.springer.com/de/book/9781461468486">Applied Predictive Modeling</a>.</p></li>
@@ -257,6 +256,7 @@ Accuracy
 <li><p>In order to be able to evaluate the models refrain from any manipulation (or engineering) of features other than those accessible via the <code>preProcess</code> argument in the <code>train()</code> function.</p></li>
 <li><p>If you run into problems, feel free to ask us for help (<a href="mailto:therbootcamp.com?subject=Help me"><b>mail</b></a>). However, we won’t give you much modeling advice.</p></li>
 </ol>
+</div>
 </div>
 <div id="datasets" class="section level2">
 <h2>Datasets</h2>
