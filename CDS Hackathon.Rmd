@@ -40,7 +40,7 @@ options(digits = 3)
 
 ## Overview
 
-*Washington, D.C. anno 2054.*
+*Washington, D.C., Anno 2054.*
 
 In an utopian, future world mankind has achieved a state of perfect orderliness. In this world, humans have become ideal decision makers, who always choose rationally in light of their preferences and the law. That is, almost all humans. A small resistance continues to disobey, by letting themselves be guided by situational greed and excitement leading them to engage in ruthlessly risky behavior. To identify these troublemakers, the Secretary of Homeland Security funded a new task force headed by your friend, Tom Cruise.    
 
