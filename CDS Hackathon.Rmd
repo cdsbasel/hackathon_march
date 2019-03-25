@@ -85,7 +85,7 @@ var x = setInterval(function() {
 
 ## Instructions
 
-### A - Preliminaries
+### Preliminaries
 
 1. Using `library()` load the set of packages listed in the functions section above.
 
@@ -116,7 +116,7 @@ bbrs <- bbrs %>% mutate_if(is.character, as.factor)
 
 3. For guidance on how to go on see the code under the *Examples* tab.
 
-### B Competition rules
+### Competition rules
 
 1. The goal of the competition is to predict with minimal `MAE` the self-reported risk taking within a year (variable `Dy`).
 
