@@ -147,7 +147,7 @@ CDS Hackathon
 <h2>Overview</h2>
 <p><em>Washington, D.C. anno 2054.</em></p>
 <p>In an utopian, future world mankind has achieved a state of perfect orderliness. In this world, humans have become ideal decision makers, who always choose rationally in light of their preferences and the law. That is, almost all humans. A small resistance continues to disobey, by letting themselves be guided by situational greed and excitement leading them to engage in ruthlessly risky behavior. To identify these troublemakers, the Secretary of Homeland Security funded a new task force headed by your friend, Tom Cruise.</p>
-<p>Knowing himself little about machine learning, Tom Cruise approached you to help him predict risk taking based on a short psychological assessment known as the Basel-Berlin Risk Assessment. This less than 24h assessment has been introduced by the now classic Basel-Berlin Risk Study (<a href="http://advances.sciencemag.org/content/advances/3/10/e1701381.full.pdf"><strong>BBRS</strong></a>) conducted almost 30 years ago by Renato Frey and colleagues. Your task is to use the BBRS’s data to develop a model that predicts self-reported, yearly risk taking based on the 224 variables of this frugal measurement instrument.</p>
+<p>Knowing himself little about machine learning, Tom Cruise approached you to help him predict risk taking based on a short psychological assessment known as the Basel-Berlin Risk Assessment. This less than 24h assessment has been introduced by the now classic Basel-Berlin Risk Study (<a href="http://advances.sciencemag.org/content/advances/3/10/e1701381.full.pdf"><strong>BBRS</strong></a>) conducted almost 30 years ago by Renato Frey and colleagues. Your task is to use the BBRS’s data to develop a model that predicts self-reported, yearly risk taking based on the 207 variables of this frugal measurement instrument.</p>
 <p>Specifcally, your goal is to outperform Tom’s other friends by finding a model that has the lowest mean absolute error (MAE) in order to prove to him that you are worthy of his trust.</p>
 <p>The competition will end in…</p>
 <font style="font-size:32px">
@@ -202,7 +202,7 @@ library(caret)</code></pre>
 <li>With the code below, load the <code>bbrs</code> data set and change any character variables to factors.</li>
 </ol>
 <pre class="r"><code># Load bbrs data
-bbrs &lt;- read_csv(file = &quot;https://cdsbasel.github.io/hackathon_march/bbrs_train.csv&quot;)
+bbrs &lt;- read_csv(file = &quot;https://cdsbasel.github.io/hackathon_march/BBRS_train.csv&quot;)
 
 # change character to factor
 bbrs &lt;- bbrs %&gt;% mutate_if(is.character, as.factor)</code></pre>
@@ -255,15 +255,15 @@ MAE
 </table>
 </div>
 <ol start="5" style="list-style-type: decimal">
-<li><p>Use any weapon in your arsenal (or <code>caret</code>’s arsenal). Feel free to try different models, use different tuning parameter settings or preprocessing methods, make use of all or some variables. Whatever may lead to the highest prediction <code>MAE</code>. For helo take a look at the full <a href="https://therbootcamp.github.io/appliedML_2019Jan/"><strong>course materials</strong></a>.</p></li>
+<li><p>Use any weapon in your arsenal (or <code>caret</code>’s arsenal). Feel free to try different models, use different tuning parameter settings or preprocessing methods, make use of all or some variables. Whatever may lead to the highest prediction <code>MAE</code>. For help take a look at the full <a href="https://therbootcamp.github.io/appliedML_2019Jan/"><strong>course materials</strong></a>.</p></li>
 <li><p>In order to be able to evaluate the models refrain from any manipulation (engineering) of features other than those accessible via the <code>preProcess</code> argument in the <code>train()</code> function.</p></li>
 </ol>
 </div>
 </div>
-<div id="datasets" class="section level2">
-<h2>Datasets</h2>
-<div id="data-sets" class="section level4">
-<h4>Data sets</h4>
+<div id="dataset" class="section level2">
+<h2>Dataset</h2>
+<div id="data-set" class="section level4">
+<h4>Data set</h4>
 <table>
 <thead>
 <tr class="header">

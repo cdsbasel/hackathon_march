@@ -44,7 +44,7 @@ options(digits = 3)
 
 In an utopian, future world mankind has achieved a state of perfect orderliness. In this world, humans have become ideal decision makers, who always choose rationally in light of their preferences and the law. That is, almost all humans. A small resistance continues to disobey, by letting themselves be guided by situational greed and excitement leading them to engage in ruthlessly risky behavior. To identify these troublemakers, the Secretary of Homeland Security funded a new task force headed by your friend, Tom Cruise.    
 
-Knowing himself little about machine learning, Tom Cruise approached you to help him predict risk taking based on a short psychological assessment known as the Basel-Berlin Risk Assessment. This less than 24h assessment has been introduced by the now classic Basel-Berlin Risk Study ([**BBRS**](http://advances.sciencemag.org/content/advances/3/10/e1701381.full.pdf)) conducted almost 30 years ago by Renato Frey and colleagues. Your task is to use the BBRS's data to develop a model that predicts self-reported, yearly risk taking based on the 224 variables of this frugal measurement instrument.      
+Knowing himself little about machine learning, Tom Cruise approached you to help him predict risk taking based on a short psychological assessment known as the Basel-Berlin Risk Assessment. This less than 24h assessment has been introduced by the now classic Basel-Berlin Risk Study ([**BBRS**](http://advances.sciencemag.org/content/advances/3/10/e1701381.full.pdf)) conducted almost 30 years ago by Renato Frey and colleagues. Your task is to use the BBRS's data to develop a model that predicts self-reported, yearly risk taking based on the 207 variables of this frugal measurement instrument.      
 
 Specifcally, your goal is to outperform Tom's other friends by finding a model that has the lowest mean absolute error (MAE) in order to prove to him that you are worthy of his trust. 
 
@@ -107,7 +107,7 @@ library(tidyverse)
 ```{r, echo = TRUE, eval = FALSE, message = FALSE, warning = FALSE}
 
 # Load bbrs data
-bbrs <- read_csv(file = "https://cdsbasel.github.io/hackathon_march/bbrs_train.csv")
+bbrs <- read_csv(file = "https://cdsbasel.github.io/hackathon_march/BBRS_train.csv")
 
 # change character to factor
 bbrs <- bbrs %>% mutate_if(is.character, as.factor)
@@ -148,14 +148,14 @@ saveRDS(my_train,'1_Data/myname_mypseudonym_train.RDS')
 </table>
 </div>
 
-5. Use any weapon in your arsenal (or `caret`'s arsenal). Feel free to try different models, use different tuning parameter settings or preprocessing methods, make use of all or some variables. Whatever may lead to the highest prediction `MAE`. For helo take a look at the full [**course materials**](https://therbootcamp.github.io/appliedML_2019Jan/). 
+5. Use any weapon in your arsenal (or `caret`'s arsenal). Feel free to try different models, use different tuning parameter settings or preprocessing methods, make use of all or some variables. Whatever may lead to the highest prediction `MAE`. For help take a look at the full [**course materials**](https://therbootcamp.github.io/appliedML_2019Jan/). 
 
 6. In order to be able to evaluate the models refrain from any manipulation (engineering) of features other than those accessible via the `preProcess` argument in the `train()` function.
 
 
-## Datasets
+## Dataset
 
-#### Data sets
+#### Data set
 
 |File  |Rows | Columns |
 |:----|:-----|:------|
