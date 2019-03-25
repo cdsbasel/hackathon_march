@@ -142,7 +142,7 @@ saveRDS(my_train,'1_Data/myname_mypseudonym_train.RDS')
 
 |File  |Rows | Columns |
 |:----|:-----|:------|
-|[bbrs_train]()| 748 | 207 |
+|[bbrs_train]("https://cdsbasel.github.io/hackathon_march/BBRS_train.csv")| 748 | 207 |
 
 #### Variable descriptions
 
