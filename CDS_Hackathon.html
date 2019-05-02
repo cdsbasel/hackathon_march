@@ -11,7 +11,7 @@
 
 
 
-<title>Risky, Sifty!</title>
+<title>CDS_Hackathon.utf8</title>
 
 <script src="CDS_Hackathon_files/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -70,9 +70,7 @@ h6 {
 
 <link rel="stylesheet" href="practical.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -97,16 +95,78 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
 
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
@@ -115,25 +175,20 @@ $(document).ready(function () {
 
 
 
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
 
 
 <div class="fluid-row" id="header">
 
 
 
-<h1 class="title toc-ignore">Risky, Sifty!</h1>
-<h4 class="author"><em><table style='table-layout:fixed;width:100%;border:0;padding:0;margin:0'>
-<col width='10%'>
-<col width='10%'>
-<tr style="border:none">
-<td style="display:block;width:100%;text-align:left;vertical-align:bottom;padding:0;margin:0;border:none" nowrap>
-CDS Hackathon
-</td>
-<td style="width:100%;vertical-align:bottom;text-align:right;padding:0;margin:0;border:none">
-<img src='https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/by-sa.png' style='height:15px;width:80px'/>
-</td>
-</tr>
-</table></em></h4>
 
 </div>
 
@@ -146,7 +201,7 @@ CDS Hackathon
 <div id="overview" class="section level2">
 <h2>Overview</h2>
 <p><em>Washington, D.C., Anno 2054.</em></p>
-<p>In an utopian, future world mankind has achieved a state of perfect orderliness. In this world, humans have become ideal decision makers, who always choose rationally in light of their preferences and the law. That is, almost all humans. A small resistance continues to disobey, by letting themselves be guided by situational greed and excitement leading them to engage in ruthlessly risky behavior. To identify these troublemakers, the Secretary of Homeland Security funded a new task force headed by your friend, Tom Cruise.</p>
+<p>In an utopian, future world mankind has achieved a state of perfect orderliness. In this world, humans have become ideal decision makers, who always choose rationally in light of their preferences and the law. That is, almost all humans. A small resistance continues to disobey, by letting themselves be guided by situational greed and excitement, leading them to engage in ruthlessly risky behavior. To identify these troublemakers, the Secretary of Homeland Security funded a new task force headed by your friend, Tom Cruise.</p>
 <p>Knowing himself little about machine learning, Tom Cruise approached you to help him predict risk taking based on a short psychological assessment known as the Basel-Berlin Risk Assessment. This less than 24h assessment has been introduced by the classic Basel-Berlin Risk Study (<a href="http://advances.sciencemag.org/content/advances/3/10/e1701381.full.pdf"><strong>BBRS</strong></a>) conducted almost 30 years ago by Renato Frey and colleagues. Your task is to use the BBRS’s data to develop a model that predicts self-reported, yearly risk taking based on the 207 variables of this frugal measurement instrument.</p>
 <p>Specifically, your goal is to outperform Tom’s other friends by finding a model that has the lowest mean absolute error (MAE) in order to prove to him that you are worthy of his friendship. Follow the instructions under the <em>Instructions</em> tab.</p>
 <p>The competition ends in…</p>
@@ -156,7 +211,11 @@ CDS Hackathon
 <p></font></p>
 <script>
 // Set the date we're counting down to
+<<<<<<< HEAD
+var countDownDate = new Date("May 2, 2019 19:00:00").getTime();
+=======
 var countDownDate = new Date("May 2, 2019 19:15:00").getTime();
+>>>>>>> b3a09435a79dcb982229fd6c969658cff4c9edb1
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -187,10 +246,10 @@ var x = setInterval(function() {
 </div>
 <div id="instructions" class="section level2">
 <h2>Instructions</h2>
-<div id="a---preliminaries" class="section level3">
-<h3>A - Preliminaries</h3>
+<div id="preliminaries" class="section level3">
+<h3>Preliminaries</h3>
 <ol style="list-style-type: decimal">
-<li>Using <code>library()</code> load the set of packages listed in the functions section above.</li>
+<li>Load the set of packages listed in the functions section above.</li>
 </ol>
 <pre class="r"><code>## NAME
 ## DATE
@@ -199,7 +258,7 @@ var x = setInterval(function() {
 library(tidyverse)
 library(caret)</code></pre>
 <ol start="2" style="list-style-type: decimal">
-<li>With the code below, load the <code>bbrs</code> data set and change any character variables to factors.</li>
+<li>Load the <code>bbrs</code> data set and change any character variables to factors.</li>
 </ol>
 <pre class="r"><code># Load bbrs data
 bbrs &lt;- read_csv(file = &quot;https://cdsbasel.github.io/hackathon_march/BBRS_train.csv&quot;)
@@ -210,52 +269,18 @@ bbrs &lt;- bbrs %&gt;% mutate_if(is.character, as.factor)</code></pre>
 <li>For guidance on how to go on see the code under the <em>Examples</em> tab.</li>
 </ol>
 </div>
-<div id="b-competition-rules" class="section level3">
-<h3>B Competition rules</h3>
+<div id="competition-rules" class="section level3">
+<h3>Competition rules</h3>
 <ol style="list-style-type: decimal">
-<li><p>The goal of the competition is to predict with minimal <code>MAE</code> the self-reported risk taking within a year (variable <code>Dy</code>).</p></li>
-<li><p>Entering the competition grants you a chance to win lots of 🍾🍾🍾.</p></li>
+<li><p>The goal of the competition is to <strong>predict <code>Dy</code></strong> (self-reported risk taking within a year) with <strong>minimal <code>MAE</code></strong>.</p></li>
+<li><p>Entering the competition grants you a chance to win 🍾🍾🍾.</p></li>
 <li><p>To enter the competition, you must submit no more, no less than one caret <code>train</code>-object (result of the <code>train()</code> function) containing your candidate model. To submit the model, first save your model as an <code>.RDS</code>-file named <code>yourname_pseudonym_train.RDS</code>, with <code>yourname</code> replaced by your real name and <code>pseudonym</code> replaced by a pseudonym of your choice. See the code below.</p></li>
 </ol>
 <pre class="r"><code># save train obect as .RDS
 saveRDS(my_train,&#39;1_Data/myname_mypseudonym_train.RDS&#39;)</code></pre>
 <ol start="4" style="list-style-type: decimal">
-<li>Submit your <code>.RDS</code> file (containing your training object) via the following Links sheets:</li>
-</ol>
-<div align="center">
-<table>
-<tr>
-<th>
-Task type
-</th>
-<th>
-Criterion
-</th>
-<th>
-Performance measure
-</th>
-<th>
-Submission link
-</th>
-</tr>
-<tr>
-<td>
-Regression
-</td>
-<td>
-Yearly risk taking (<code>Dy</code>)
-</td>
-<td>
-MAE
-</td>
-<td>
-<a href="https://www.dropbox.com/request/QapEfuzEL4JM9bR62hXZ"><strong>Submit candidate</strong></a>
-</td>
-</tr>
-</table>
-</div>
-<ol start="5" style="list-style-type: decimal">
-<li><p>Use any weapon in your arsenal (or <code>caret</code>’s arsenal). Feel free to try different models, use different tuning parameter settings or preprocessing methods, make use of all or some variables. Whatever may lead to the highest prediction <code>MAE</code>. For help take a look at the full <a href="https://therbootcamp.github.io/appliedML_2019Jan/"><strong>course materials</strong></a>.</p></li>
+<li><p>Submit your <code>.RDS</code> file (containing your training object) via this link: <a href="https://www.dropbox.com/request/QapEfuzEL4JM9bR62hXZ"><strong>Submit candidate</strong></a>.</p></li>
+<li><p>Use any weapon in your arsenal (or <code>caret</code>’s arsenal). Feel free to try different models (see <em>Models</em> tab), use different tuning parameter settings or preprocessing methods, make use of all or some variables. Whatever may lead to the highest prediction <code>MAE</code>. For help take a look at the full <a href="https://therbootcamp.github.io/appliedML_2019Jan/">course materials</a>.</p></li>
 <li><p>In order to be able to evaluate the models refrain from any manipulation (engineering) of features other than those accessible via the <code>preProcess</code> argument in the <code>train()</code> function.</p></li>
 </ol>
 </div>
@@ -274,7 +299,7 @@ MAE
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><a href="">bbrs_train</a></td>
+<td align="left"><a href="%22https://cdsbasel.github.io/hackathon_march/BBRS_train.csv%22">bbrs_train</a></td>
 <td align="left">748</td>
 <td align="left">207</td>
 </tr>
@@ -1214,11 +1239,11 @@ MAE
 <h2>Functions</h2>
 <div id="functions-1" class="section level4">
 <h4>Functions</h4>
-<table style="width:83%;">
+<table>
 <colgroup>
-<col width="6%" />
-<col width="11%" />
-<col width="65%" />
+<col width="7%" />
+<col width="12%" />
+<col width="80%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1295,7 +1320,7 @@ MAE
 </div>
 <div id="models" class="section level2">
 <h2>Models</h2>
-<iframe src="https://topepo.github.io/caret/available-models.html" style="width:100%;height:600px">
+<iframe src="https://topepo.github.io/caret/available-models.html" style="width:100%;height:1200px">
 </iframe>
 </div>
 <div id="examples" class="section level2">
@@ -1467,7 +1492,7 @@ postResample(pred = glm_sca_pred, obs = criterion_test)</code></pre>
 <div id="documentation" class="section level4">
 <h4>Documentation</h4>
 <ul>
-<li>The <code>caret</code> package webpage at <a href="https://topepo.github.io/caret/" class="uri">https://topepo.github.io/caret/</a> basically covers the contents of <a href="http://appliedpredictivemodeling.com/" class="uri">http://appliedpredictivemodeling.com/</a>.</li>
+<li>The <code>caret</code> package webpage at <a href="https://topepo.github.io/caret/">https://topepo.github.io/caret/</a> basically covers the contents of <a href="http://appliedpredictivemodeling.com/">http://appliedpredictivemodeling.com/</a>.</li>
 </ul>
 </div>
 <div id="cheatsheet" class="section level4">
