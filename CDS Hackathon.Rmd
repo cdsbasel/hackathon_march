@@ -54,11 +54,7 @@ The competition ends in...
 
 <script>
 // Set the date we're counting down to
-<<<<<<< HEAD
-var countDownDate = new Date("May 2, 2019 19:00:00").getTime();
-=======
 var countDownDate = new Date("May 2, 2019 19:15:00").getTime();
->>>>>>> b3a09435a79dcb982229fd6c969658cff4c9edb1
 
 // Update the count down every 1 second
 var x = setInterval(function() {
